@@ -25,3 +25,7 @@ header{
   display: flex;
   justify-content: space-between;
 }
+
+#iconGaiola {
+  width: 45px;
+}
