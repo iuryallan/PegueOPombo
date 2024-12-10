@@ -12,6 +12,7 @@ Palheta de cores.
  */
 
 *{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   padding: 0;
 }
@@ -20,12 +21,36 @@ html{
   font-size:62,5%;
 }
 
+body{
+  height:100vh
+}
+
 header{
+  padding: 5px 10px 5px 10px;
   background: #416788;
   display: flex;
   justify-content: space-between;
 }
 
 #iconGaiola {
-  width: 45px;
+  width: 35px;
+}
+
+.header-titulo{
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+.header-config img{
+  width: 2rem;
+  transition: ease transform 0.4;
+}
+.header-config img:hover{
+  cursor: pointer;
+  transform: rotate(200deg);
 }
