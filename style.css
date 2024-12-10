@@ -1,0 +1,27 @@
+/*
+Palheta de cores.
+#DD6E42
+
+#E8DAB2
+
+#EAEAEA
+
+#7389AE
+
+#416788
+ */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size:62,5%;
+}
+
+header{
+  background: #416788;
+  display: flex;
+  justify-content: space-between;
+}
