@@ -145,6 +145,7 @@ main{
   padding: 1rem;
   border-radius: 0.8rem;
   position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592)
 }
 
 .titulo-como-jogar{
@@ -158,6 +159,7 @@ main{
   border: 2px solid black;
   border-radius: 0.6rem;
   transform: rotate(-8deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.488)
 }
 h2{
   font-size: 1rem;
