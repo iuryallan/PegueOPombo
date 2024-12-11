@@ -66,8 +66,9 @@ main{
   width: 88vw;
   box-sizing: border-box;
   background-color: #EAEAEA;
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   border-radius: 0.5rem;
+  margin-bottom: 2.6rem;
 }
 
 .cenario{
@@ -112,4 +113,47 @@ main{
 .score-time{
   display: flex;
   gap: 2rem;
+}
+
+.infos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 4rem;
+  max-width: 50rem;
+  width: 100%;
+}
+.como-jogar-ranking{
+  width: 20rem;
+  min-height: 8rem;
+  list-style-position: inside;
+  font-size: 1rem;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background-color: #EAEAEA ;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  position: relative;
+}
+
+.titulo-como-jogar{
+  position: absolute;
+  top: -1rem;
+  text-align: center;
+  width: 9rem;
+  padding: 0.2rem;
+  background-color: #DD6E42;
+  color: #FFFFFF;
+  border: 2px solid black;
+  border-radius: 0.6rem;
+  transform: rotate(-8deg);
+}
+h2{
+  font-size: 1rem;
+}
+
+li::marker{
+  font-size: 1.5rem;
+  color: #DD6E42;
 }
