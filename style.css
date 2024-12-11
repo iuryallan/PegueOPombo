@@ -113,3 +113,16 @@ main{
   display: flex;
   gap: 2rem;
 }
+
+footer {
+  background-color: #416788;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+footer p {
+  color: #fff;
+}
