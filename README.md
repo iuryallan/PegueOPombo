@@ -1,4 +1,4 @@
-# Jogo: Pegue o Pombo 🕊️
+# Jogo: Pegue o Pombo 🕊️🎮
 
 ## Objetivo do Jogo
 
@@ -34,7 +34,7 @@ O **"Pegue o Pombo"** é um jogo simples e divertido, onde o objetivo principal 
 
 ## Melhor Pontuação
 
-- **Sua Melhor Pontuação**: `0 pontos` (A pontuação será salva e exibida aqui)
+- **Sua Melhor Pontuação**: `0 pontos` (Sua melhor pontuação será salva e exibida!)
 
 > Vença o desafio, melhore sua pontuação e compartilhe com seus amigos! 🏆
 
