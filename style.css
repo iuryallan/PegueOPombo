@@ -91,6 +91,7 @@ main{
 .botoes{
   display: flex;
   gap: 0.5rem;
+  box-shadow: #00000080;
 }
 .iniciar{
   background-color: #22c55e;
