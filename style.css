@@ -22,7 +22,12 @@ html{
 }
 
 body{
-  height:100vh
+  height:100vh;
+  background-color: #7389AE
+  ;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header{
@@ -156,4 +161,17 @@ h2{
 li::marker{
   font-size: 1.5rem;
   color: #DD6E42;
+}
+
+footer {
+  background-color: #416788;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+footer p {
+  color: #fff;
 }
