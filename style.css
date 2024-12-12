@@ -154,7 +154,7 @@ main{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592)
 }
 
-.titulo-como-jogar{
+.titulo-como-jogar, .titulo-config{
   position: absolute;
   top: -1rem;
   text-align: center;

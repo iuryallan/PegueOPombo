@@ -3,7 +3,6 @@
 // Função para atualizar o ranking.
 // Função para atualizar tempo da partida.
 // Função para exibir interface das configurações.
-
 let interfaceConfig = document.getElementById("interface-config");
 const buttonConfig = document.getElementById("button-config");
 const buttonClose = document.getElementById("button-close")
