@@ -2,7 +2,7 @@
 // Botao iniciar deve iniciar iniciar a partida.
 // Função para atualizar o ranking.
 // Função para atualizar tempo da partida.
-// Função para definir configurações.
+// Função para exibir interface das configurações.
 
 let interfaceConfig = document.getElementById("interface-config");
 const buttonConfig = document.getElementById("button-config");
@@ -15,7 +15,7 @@ buttonConfig.addEventListener("click", () => {
 buttonClose.addEventListener("click", () => {
     interfaceConfig.style.display = "none"
 });
-
+// Função para definir configurações.
 
 // Função para ir atualizando os pontos conforme o decorrer da partida.
 let pombo = document.getElementById("icone-pombo");
