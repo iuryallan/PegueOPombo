@@ -16,13 +16,13 @@
       </h1>
     </div>
     <div class="header-config">
-      <img src="midias/settings-svgrepo-com.svg" alt="">
+      <img src="midias/settings-svgrepo-com.svg" alt="cenario do jogo">
     </div>
   </header>
   <main>
     <section class="tela-jogo">
       <div class="cenario">
-        <!-- cenario -->
+        <img src="midias/bird-svgrepo-com (1).svg" alt="icone do pombo" class="pombo">
       </div>
 
       <div class="controles">
@@ -65,6 +65,45 @@
           <!-- ranking -->
         </ul>
       </div>
+    </section>
+
+    <section class="config-popup">
+      <div class="fechar-config">
+        X
+      </div>
+        <div class="titulo-como-jogar">
+          <h2>Configurações</h2>
+        </div>
+      <p>Definir duração da partida:</p>
+      <form class="definir-config">
+        <div>
+          <label for="quinze">15s</label>
+          <input type="radio" name="tempo" id="quinze">
+        </div>
+        <div>
+          <label for="trinta">30s</label>
+          <input type="radio" name="tempo" id="trinta" checked="checked">
+        </div>
+        <div>
+          <label for="sessenta">60s</label>
+          <input type="radio" name="tempo" id="sessenta">
+        </div>
+      </form>
+
+      <p>Voce deseja salvar o processo?</p>
+      <div>
+        <form class="definir-config">
+          <div>
+            <label for="sim">Sim</label>
+            <input type="radio" name="save" id="sim">
+          </div>
+          <div>
+            <label for="nao">Não</label>
+            <input type="radio" name="save" id="nao" checked="checked">
+          </div>
+        </form>
+      </div>
+      <button class="botao-salvar">Salvar</button>
     </section>
   </main>
   <footer>

@@ -61,6 +61,7 @@ h1{
 }
 
 main{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -84,6 +85,7 @@ main{
   background-size: cover;
   background-color: #d1d5db;
   height: 20rem;
+  position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
 }
 
@@ -137,7 +139,7 @@ main{
   max-width: 50rem;
   width: 100%;
 }
-.como-jogar-ranking{
+.como-jogar-ranking {
   width: 20rem;
   min-height: 8rem;
   list-style-position: inside;
@@ -185,4 +187,70 @@ footer {
 
 footer p {
   color: #fff;
+}
+
+.pombo{
+  width: 3rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.config-popup{
+  position: absolute;
+  top: 3rem;
+  display: none;
+  flex-direction:column;
+  align-items: center;
+  gap: 1rem;
+  margin-top:2rem;
+  width: 20rem;
+  min-height: 8rem;
+  font-size: 1rem;
+  background-color: #EAEAEA ;
+  padding: 1.7rem 1rem 1rem 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592)
+}
+
+.definir-config{
+  display: flex;
+  gap: 2rem;
+}
+
+.botao-salvar{
+  font-weight: bold;
+  color: white;
+  width: 15rem;
+  background-color: #DD6E42;
+  padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+  border-radius: 100rem;
+  transition: ease transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.botao-salvar:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.fechar-config{
+  position: absolute;
+  left: 20.8rem;
+  top: -0.7rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 0.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  color: white;
+  border: 0.06rem solid black;
+  background-color: #DD6E42;
+  transition: ease transform 0.2s;
+}
+
+.fechar-config:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
