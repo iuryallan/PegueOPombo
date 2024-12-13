@@ -1,13 +1,13 @@
 // Pombo deve esta dentro do cenario.
 // Botao iniciar deve iniciar iniciar a partida.
 let jogoAtivo = false;
-
+let idPartida;
 function gerarPosicao(medida) {
     return Math.random() * medida;
 }
 
 function moverPombo(){
-    cenario = document.getElementById("cenarioId");
+    let cenario = document.getElementById("cenarioId");
     let pombo = document.getElementById("icone-pombo");
     
     let limiteLargura = cenario.clientWidth - pombo.offsetWidth;
@@ -23,7 +23,15 @@ const botaoIniciar = document.getElementsByClassName("iniciar")[0];
 botaoIniciar.addEventListener("click",() => {
     if(!jogoAtivo){
         jogoAtivo = true;
-        setInterval(moverPombo,1000);
+        idPartida = setInterval(moverPombo,1000);
+    }
+})
+const botaoParar = document.getElementsByClassName("parar")[0];
+
+botaoParar.addEventListener("click",() => {
+    if(jogoAtivo){
+        jogoAtivo = false;
+        clearInterval(idPartida)
     }
 })
 
@@ -51,6 +59,9 @@ function atualizarTempo() {
 
     spanTempo.innerText = `Tempo: ${tempo}s`;
 }
+
+//contagem de tempo
+
 
 // Função para exibir interface das configurações.
 let interfaceConfig = document.getElementById("interface-config");
