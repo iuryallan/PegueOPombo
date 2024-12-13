@@ -21,7 +21,7 @@
   </header>
   <main>
     <section class="tela-jogo">
-      <div class="cenario">
+      <div id="cenarioId" class="cenario">
         <img src="midias/bird-svgrepo-com (1).svg" alt="icone do pombo" id="icone-pombo" class="pombo">
       </div>
 
@@ -31,8 +31,8 @@
           <button class="parar">Parar</button>
         </div>
         <div class="score-time">
-          <span id="pontos">Pontos:</span>
-          <span>Tempo:</span>
+          <span id="pontos">Pontos: 0</span>
+          <span id="tempo">Tempo:</span>
         </div>
       </div>
     </section>
@@ -47,7 +47,10 @@
             Clique em "Iniciar" para começar
           </li>
           <li>
-            Clique no pombo para marcar pontos
+            Clique no pombo e ganhe 15 pontos!
+          </li>
+          <li>
+            Erre o pombo e perca 5 pontos
           </li>
           <li>
             Seja rápido! O pombo se move

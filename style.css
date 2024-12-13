@@ -189,6 +189,7 @@ footer p {
 }
 
 .pombo{
+  z-index: 10;
   width: 3rem;
   cursor: pointer;
   position: absolute;
