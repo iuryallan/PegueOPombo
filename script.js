@@ -40,8 +40,7 @@ cenario.addEventListener("click", () => {
         pontos=0;
     }else{
         spanPontos.innerText = `Pontos: ${pontos}`;
-    }
-     
+    }  
 });
 
 // manter as configurações salvas ao sair do jogo(opicional)

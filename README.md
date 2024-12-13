@@ -2,12 +2,12 @@
 
 ## Objetivo do Jogo
 
-O **"Pegue o Pombo"** é um jogo simples e divertido, onde o objetivo principal é capturar um pombo. O pombo aparece em locais diferentes na tela e o jogador deve clicar sobre ele para ganhar pontos. Quanto mais rápido você pegar o pombo, mais pontos você ganha. Quando alcança a pontuação máxima, o pombo começa a se mover mais rápido e de maneira imprevisível.
+O **"Pegue o Pombo"** é um jogo simples e divertido, onde o objetivo principal é capturar um pombo. O pombo aparece em locais diferentes na tela e o jogador deve clicar sobre ele para ganhar pontos. Quanto mais vezes você pegar o pombo, mais pontos você ganha. O seu record vai ser guardado como pontuação máxima.
 
 ### Regras do Jogo:
 1. **Capture o Pombo**: O pombo aparece em locais aleatórios. Clique nele para ganhar pontos.
 2. **Mudança de Local**: A cada captura, o pombo se move para um novo local.
-3. **Pontuação**: Cada pombo capturado concede pontos. A pontuação será exibida na tela.
+3. **Pontuação**: Cada pombo capturado concede pontos. E cada vez que você errar a posição do pombo, perde pontos.
 4. **Melhor Pontuação**: A melhor pontuação será salva e exibida para você desafiar seus limites!
 
 
