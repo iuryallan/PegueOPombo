@@ -80,16 +80,18 @@
       <p>Definir duração da partida:</p>
       <form class="definir-config">
         <div>
-          <label for="quinze">15s</label>
-          <input type="radio" name="tempo" id="quinze">
+          <label for="trinta">30s</label>
+          <input type="radio" name="tempo" value="30" id="trinta" checked="checked">
         </div>
         <div>
-          <label for="trinta">30s</label>
-          <input type="radio" name="tempo" id="trinta" checked="checked">
+          <label for="quatro-cinco">45s</label>
+          <input type="radio" name="tempo"
+          value="45" id="quatro-cinco">
         </div>
         <div>
           <label for="sessenta">60s</label>
-          <input type="radio" name="tempo" id="sessenta">
+          <input type="radio" name="tempo" value="60"
+          id="sessenta">
         </div>
       </form>
 
@@ -106,7 +108,7 @@
           </div>
         </form>
       </div>
-      <button class="botao-salvar">Salvar</button>
+      <button class="botao-salvar" onclick="atualizarTempo()">Salvar</button>
     </section>
   </main>
   <footer>

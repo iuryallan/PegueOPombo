@@ -28,7 +28,30 @@ botaoIniciar.addEventListener("click",() => {
 })
 
 // Função para atualizar o ranking.
-// Função para atualizar tempo da partida.
+
+// Função para definir configurações.
+let tempo = 30;
+let spanTempo = document.getElementById("tempo");
+spanTempo.innerText = `Tempo: ${tempo}s`;
+
+function atualizarTempo() {
+    let spanTempo = document.getElementById("tempo");
+    
+    let trinta = document.getElementById("trinta");
+    let quatroCinco = document.getElementById("quatro-cinco");
+    let sessenta = document.getElementById("sessenta");
+
+    if (trinta.checked) {
+        tempo = 30;
+    } else if (quatroCinco.checked) {
+        tempo = 45;
+    } else if (sessenta.checked) {
+        tempo = 60;
+    }
+
+    spanTempo.innerText = `Tempo: ${tempo}s`;
+}
+
 // Função para exibir interface das configurações.
 let interfaceConfig = document.getElementById("interface-config");
 const buttonConfig = document.getElementById("button-config");
@@ -42,10 +65,7 @@ buttonClose.addEventListener("click", () => {
     interfaceConfig.style.display = "none"
 });
 
-// Função para definir configurações.
-let spanTempo = document.getElementById("tempo");
-let tempo = 30;
-spanTempo.innerText = `Tempo: ${tempo}s`;
+
 
 
 // Função para ir atualizando os pontos conforme o decorrer da partida.
