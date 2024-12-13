@@ -1,6 +1,6 @@
 // Pombo deve esta dentro do cenario.
 // Botao iniciar deve iniciar iniciar a partida.
-let jogoAtivo = true;
+let jogoAtivo = false;
 
 function gerarPosicao(medida) {
     return Math.random() * medida;
@@ -17,7 +17,15 @@ function moverPombo(){
     pombo.style.left = gerarPosicao(limiteLargura) + "px";
 }
 
-setInterval(moverPombo,1000);
+
+const botaoIniciar = document.getElementsByClassName("iniciar")[0];
+
+botaoIniciar.addEventListener("click",() => {
+    if(!jogoAtivo){
+        jogoAtivo = true;
+        setInterval(moverPombo,1000);
+    }
+})
 
 // Função para atualizar o ranking.
 // Função para atualizar tempo da partida.
