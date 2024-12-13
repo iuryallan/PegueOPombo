@@ -27,7 +27,7 @@ let pombo = document.getElementById("icone-pombo");
 let spanPontos = document.getElementById("pontos");
 let pontos = 0;
 
-pombo.addEventListener("click", () => {
+pombo.addEventListener("click", (event) => {
     pontos += 15;
     spanPontos.innerText = `Pontos: ${pontos}`;
     event.stopPropagation();
