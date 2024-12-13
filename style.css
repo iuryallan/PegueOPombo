@@ -188,12 +188,12 @@ footer p {
   color: #fff;
 }
 
-.pombo{
-  z-index: 10;
+#icone-pombo{
   width: 3rem;
   cursor: pointer;
   position: absolute;
 }
+
 
 .config-popup{
   position: absolute;
