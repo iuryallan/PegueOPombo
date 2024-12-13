@@ -17,24 +17,6 @@ function moverPombo(){
     pombo.style.left = gerarPosicao(limiteLargura) + "px";
 }
 
-
-const botaoIniciar = document.getElementsByClassName("iniciar")[0];
-
-botaoIniciar.addEventListener("click",() => {
-    if(!jogoAtivo){
-        jogoAtivo = true;
-        idPartida = setInterval(moverPombo,1000);
-    }
-})
-const botaoParar = document.getElementsByClassName("parar")[0];
-
-botaoParar.addEventListener("click",() => {
-    if(jogoAtivo){
-        jogoAtivo = false;
-        clearInterval(idPartida)
-    }
-})
-
 // Função para atualizar o ranking.
 
 // Função para definir configurações.
@@ -62,6 +44,40 @@ function atualizarTempo() {
 
 //contagem de tempo
 
+//função de contagem regressiva
+function iniciarTemp () {
+    idContagem = setInterval(() => { 
+        if (tempo > 0) {
+            tempo--;
+            spanTempo.innerText = `Tempo: ${tempo}s`;
+        }
+        else {
+            jogoAtivo = false;
+            clearInterval(idContagem);
+            clearInterval(idPartida);
+        }
+    }, 1000);
+} 
+
+const botaoIniciar = document.getElementsByClassName("iniciar")[0];
+
+botaoIniciar.addEventListener("click",() => {
+    if(!jogoAtivo){
+        jogoAtivo = true;
+        idPartida = setInterval(moverPombo,1000);
+        iniciarTemp();
+    }
+})
+const botaoParar = document.getElementsByClassName("parar")[0];
+
+botaoParar.addEventListener("click",() => {
+    if(jogoAtivo){
+        jogoAtivo = false;
+        clearInterval(idContagem);
+        clearInterval(idPartida);
+        atualizarTempo();
+    }
+})
 
 // Função para exibir interface das configurações.
 let interfaceConfig = document.getElementById("interface-config");
