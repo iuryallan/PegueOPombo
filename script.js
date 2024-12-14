@@ -71,6 +71,8 @@ function iniciarTemp () {
             clearInterval(idContagem);
             clearInterval(idPartida);
             atualizarTempo();
+            pontos = 0;
+            habilitado = false;
             pombo.style.top = 0 +"px";
             pombo.style.left = 0 + "px";
             spanPontos.innerText = `Pontos: ${0}`;
