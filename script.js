@@ -1,10 +1,26 @@
+let idPartida;
+let jogoAtivo = false;
+let tempo = 30;
+let pontos = 0;
+let habilitado = false;
+let ranking = [];
+const botaoIniciar = document.getElementsByClassName("iniciar")[0];
 // Pombo deve esta dentro do cenario.
 // Botao iniciar deve iniciar iniciar a partida.
-let jogoAtivo = false;
-let idPartida;
+
 function gerarPosicao(medida) {
     return Math.random() * medida;
 }
+
+function iniciarPartida(){
+    if(!jogoAtivo){
+        jogoAtivo = true;
+        idPartida = setInterval(moverPombo,1000);
+        iniciarTemp();
+        habilitado = true;
+    }
+}
+
 
 function moverPombo(){
     let cenario = document.getElementById("cenarioId");
@@ -20,7 +36,6 @@ function moverPombo(){
 // Função para atualizar o ranking.
 
 // Função para definir configurações.
-let tempo = 30;
 let spanTempo = document.getElementById("tempo");
 spanTempo.innerText = `Tempo: ${tempo}s`;
 
@@ -55,19 +70,16 @@ function iniciarTemp () {
             jogoAtivo = false;
             clearInterval(idContagem);
             clearInterval(idPartida);
+            atualizarTempo();
+            pombo.style.top = 0 +"px";
+            pombo.style.left = 0 + "px";
+            spanPontos.innerText = `Pontos: ${0}`;
         }
     }, 1000);
 } 
 
-const botaoIniciar = document.getElementsByClassName("iniciar")[0];
+// fazendo e interronpendo os movimentos do pombo
 
-botaoIniciar.addEventListener("click",() => {
-    if(!jogoAtivo){
-        jogoAtivo = true;
-        idPartida = setInterval(moverPombo,1000);
-        iniciarTemp();
-    }
-})
 const botaoParar = document.getElementsByClassName("parar")[0];
 
 botaoParar.addEventListener("click",() => {
@@ -76,6 +88,11 @@ botaoParar.addEventListener("click",() => {
         clearInterval(idContagem);
         clearInterval(idPartida);
         atualizarTempo();
+        pontos = 0;
+        habilitado = false;
+        spanPontos.innerText = `Pontos: ${pontos}`;
+        pombo.style.top = 0 +"px";
+        pombo.style.left = 0 + "px";
     }
 })
 
@@ -93,28 +110,24 @@ buttonClose.addEventListener("click", () => {
 });
 
 
-
-
 // Função para ir atualizando os pontos conforme o decorrer da partida.
 
 let pombo = document.getElementById("icone-pombo");
 let spanPontos = document.getElementById("pontos");
-let pontos = 0;
 
-pombo.addEventListener("click", (event) => {
-    pontos += 15;
-    spanPontos.innerText = `Pontos: ${pontos}`;
-    event.stopPropagation();
-});
+function incrementarPontos(){
+    if(habilitado){
+        pontos += 15;
+        spanPontos.innerText = `Pontos: ${pontos}`;
+        stopPropagation();
+    }
+}
 
-let cenario = document.getElementById("cenarioId");
-cenario.addEventListener("click", () => {
+function decrementarPontos(){
     pontos -= 5;
     if(pontos < 0){
         pontos=0;
     }else{
         spanPontos.innerText = `Pontos: ${pontos}`;
-    }  
-});
-
-// manter as configurações salvas ao sair do jogo(opicional)
+    } 
+}

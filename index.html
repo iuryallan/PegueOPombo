@@ -21,13 +21,13 @@
   </header>
   <main>
     <section class="tela-jogo">
-      <div id="cenarioId" class="cenario">
-        <div id="icone-pombo"><img src="midias/bird-svgrepo-com (1).svg" alt="icone do pombo" class="pombo"></div>
+      <div id="cenarioId" class="cenario" onclick="decrementarPontos()">
+        <div id="icone-pombo" onclick="incrementarPontos()"><img src="midias/bird-svgrepo-com (1).svg" alt="icone do pombo" class="pombo"></div>
       </div>
 
       <div class="controles">
         <div class="botoes">
-          <button class="iniciar">Iniciar</button>
+          <button class="iniciar" onclick="iniciarPartida()">Iniciar</button>
           <button class="parar">Parar</button>
         </div>
         <div class="score-time">
@@ -64,9 +64,9 @@
         <div class="titulo-como-jogar" style="width: 11rem;">
           <h2>Melhores Pontuações</h2>
         </div>
-        <ul>
+        <ol id="rankingLista">
           <!-- ranking -->
-        </ul>
+        </ol>
       </div>
     </section>
 
