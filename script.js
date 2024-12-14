@@ -102,7 +102,9 @@ const buttonConfig = document.getElementById("button-config");
 const buttonClose = document.getElementById("button-close")
 
 buttonConfig.addEventListener("click", () => {
-    interfaceConfig.style.display = "flex"
+    if (!jogoAtivo){
+        interfaceConfig.style.display = "flex"
+    }
 });
 
 buttonClose.addEventListener("click", () => {
@@ -130,4 +132,27 @@ function decrementarPontos(){
     }else{
         spanPontos.innerText = `Pontos: ${pontos}`;
     } 
+}
+
+function atualizarRanking(novaPontuacao){
+    let MenorPontuacao = Math.min(...ranking);
+    let indice = ranking.indexOf(MenorPontuacao);
+    if (ranking.length <= 5){
+        if (novaPontuacao > MenorPontuacao){
+            ranking[indice] = novaPontuacao;
+        }
+    }
+}
+
+function adicionarPontucaoRanking(){
+    let li = document.createElement("li");
+    let listaPontos = document.createElementById("rankingLista");
+    
+    for (let i= 0; i < ranking.length ; i++){
+        let li = document.createElement("li");
+    
+        li.textContent = `${ranking[i]} Pontos`;
+    
+        listaPontos.appendChild(li);
+    }
 }
