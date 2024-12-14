@@ -70,12 +70,14 @@ function iniciarTemp () {
             jogoAtivo = false;
             clearInterval(idContagem);
             clearInterval(idPartida);
+            pombo.style.top = 0 +"px";
+            pombo.style.left = 0 + "px";
+            atualizarRanking(pontos);
+            adicionarPontucaoRanking();
             atualizarTempo();
             pontos = 0;
             habilitado = false;
-            pombo.style.top = 0 +"px";
-            pombo.style.left = 0 + "px";
-            spanPontos.innerText = `Pontos: ${0}`;
+            spanPontos.innerText = `Pontos: ${pontos}`;
         }
     }, 1000);
 } 
@@ -123,7 +125,6 @@ function incrementarPontos(){
     if(habilitado){
         pontos += 15;
         spanPontos.innerText = `Pontos: ${pontos}`;
-        stopPropagation();
     }
 }
 
@@ -137,19 +138,22 @@ function decrementarPontos(){
 }
 
 function atualizarRanking(novaPontuacao){
-    let MenorPontuacao = Math.min(...ranking);
-    let indice = ranking.indexOf(MenorPontuacao);
-    if (ranking.length <= 5){
-        if (novaPontuacao > MenorPontuacao){
-            ranking[indice] = novaPontuacao;
+    if (ranking.length < 5) {
+        ranking.push(novaPontuacao);
+    } else {
+        let menorPontuacao = Math.min(...ranking);
+        if (novaPontuacao > menorPontuacao) {
+            let indiceMenor = ranking.indexOf(menorPontuacao);
+            ranking[indiceMenor] = novaPontuacao;
         }
     }
 }
 
 function adicionarPontucaoRanking(){
-    let li = document.createElement("li");
-    let listaPontos = document.createElementById("rankingLista");
+    let listaPontos = document.getElementById("rankingLista");
     
+    listaPontos.innerHTML = "";
+
     for (let i= 0; i < ranking.length ; i++){
         let li = document.createElement("li");
     
