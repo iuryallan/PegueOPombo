@@ -192,6 +192,7 @@ footer p {
   width: 3rem;
   cursor: pointer;
   position: absolute;
+  user-select: none;
 }
 
 
