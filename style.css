@@ -270,6 +270,13 @@ ol{
   transform: scale(1.1);
 }
 
-.escolha-cenario > .opcao-cenario:nth-child(2) {
+.escolha-cenario  .opcao-cenario:nth-child(2) {
   display: none;
+}
+
+.escolha-cenario{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

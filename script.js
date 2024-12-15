@@ -167,7 +167,7 @@ function adicionarPontucaoRanking(){
 
 function alternarCenario (escolhaCenario) {
     let cenario = document.getElementsByClassName("opcao-cenario");
-    if (escolhaCenario === 0) {
+    if (escolhaCenario === 1) {
         cenario[0].style.display = "none";
         cenario[1].style.display = "block";
     } else {
