@@ -258,3 +258,14 @@ footer p {
 ol{
   color: black;
 }
+
+.botoes-navegar{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.botoes-navegar p:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
