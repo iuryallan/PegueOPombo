@@ -122,10 +122,11 @@ buttonClose.addEventListener("click", () => {
 let pombo = document.getElementById("icone-pombo");
 let spanPontos = document.getElementById("pontos");
 
-function incrementarPontos(){
+function incrementarPontos(event){
     if(habilitado){
         pontos += 15;
         spanPontos.innerText = `Pontos: ${pontos}`;
+        event.stopPropagation();
     }
 }
 
