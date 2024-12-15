@@ -55,6 +55,7 @@ function atualizarTempo() {
     }
 
     spanTempo.innerText = `Tempo: ${tempo}s`;
+    interfaceConfig.style.display = "none"
 }
 
 //contagem de tempo
@@ -82,7 +83,7 @@ function iniciarTemp () {
     }, 1000);
 } 
 
-// fazendo e interronpendo os movimentos do pombo
+// fazendo e interrompendo os movimentos do pombo
 
 const botaoParar = document.getElementsByClassName("parar")[0];
 
