@@ -1,0 +1,71 @@
+Método alternativo de contagem de tempo e pontos,
+além de ajustes na visualização do pombo, fazendo com
+que desapareça ao fim do tempo e que reinicie o jogo
+do inicio ao clicar no botão novamente.
+
+function iniciarTemp () {
+    idContagem = setInterval(() => { 
+        if (tempo > 0) {
+            tempo--;
+            spanTempo.innerText = `Tempo: ${tempo}s`;
+        } else {
+            jogoAtivo = false;
+            clearInterval(idContagem);
+            clearInterval(idPartida);
+            
+            // Thalison Cidrack
+            // Esconde o pombo ao final do jogo
+            let pombo = document.getElementById("icone-pombo");
+            pombo.style.display = "none";
+        }
+    }, 1000);
+} 
+
+const botaoIniciar = document.getElementsByClassName("iniciar")[0];
+
+botaoIniciar.addEventListener("click", () => {
+    if (!jogoAtivo) {
+        jogoAtivo = true;
+        
+        // Reinicia o tempo corretamente
+        atualizarTempo();
+        
+        // Zera os pontos ao iniciar o jogo
+        let spanPontos = document.getElementById("pontos");
+        spanPontos.innerText = `Pontos: 0`;
+        
+        // Garante que o pombo esteja visível ao iniciar o jogo
+        let pombo = document.getElementById("icone-pombo");
+        pombo.style.display = "block"; // Corrigido para exibir o pombo ao reiniciar
+        
+        idPartida = setInterval(moverPombo, 1000);
+        iniciarTemp();
+    }
+});
+
+const botaoParar = document.getElementsByClassName("parar")[0];
+
+botaoParar.addEventListener("click", () => {
+    if (jogoAtivo) {
+        jogoAtivo = false;
+        clearInterval(idContagem);
+        clearInterval(idPartida);
+        atualizarTempo();
+        
+        // Thalison Cidrack
+        // Esconde o pombo ao parar o jogo manualmente
+        let pombo = document.getElementById("icone-pombo");
+        pombo.style.display = "none";
+    }
+});
+
+// Thalison Cidrack
+let pombo = document.getElementById("icone-pombo");
+pombo.addEventListener("click", (event) => {
+    if (jogoAtivo) {
+        let pontos = parseInt(document.getElementById("pontos").innerText.replace(/[^0-9]/g, '')) || 0;
+        pontos += 15;
+        document.getElementById("pontos").innerText = `Pontos: ${pontos}`;
+        event.stopPropagation();
+    }
+});
