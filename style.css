@@ -269,3 +269,7 @@ ol{
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.escolha-cenario > .opcao-cenario:nth-child(2) {
+  display: none;
+}

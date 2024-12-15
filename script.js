@@ -164,3 +164,14 @@ function adicionarPontucaoRanking(){
         listaPontos.appendChild(li);
     }
 }
+
+function alternarCenario (escolhaCenario) {
+    let cenario = document.getElementsByClassName("opcao-cenario");
+    if (escolhaCenario === 0) {
+        cenario[0].style.display = "none";
+        cenario[1].style.display = "block";
+    } else {
+        cenario[0].style.display = "block";
+        cenario[1].style.display = "none";
+    }
+}
