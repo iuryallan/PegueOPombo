@@ -151,16 +151,16 @@ function atualizarRanking(novaPontuacao){
     }
 }
 
-function adicionarPontucaoRanking(){
+function adicionarPontucaoRanking() {
     let listaPontos = document.getElementById("rankingLista");
     
     listaPontos.innerHTML = "";
 
-    for (let i= 0; i < ranking.length ; i++){
+    let rankingOrdenado = ranking.slice().sort((a, b) => b - a);
+
+    for (let i = 0; i < rankingOrdenado.length; i++) {
         let li = document.createElement("li");
-    
-        li.textContent = `${ranking[i]} Pontos`;
-    
+        li.textContent = `${rankingOrdenado[i]} Pontos`;
         listaPontos.appendChild(li);
     }
 }
