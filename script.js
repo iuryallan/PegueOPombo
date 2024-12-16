@@ -56,6 +56,8 @@ function atualizarTempo() {
 
     spanTempo.innerText = `Tempo: ${tempo}s`;
     interfaceConfig.style.display = "none"
+
+    atualizarCenario();
 }
 
 //contagem de tempo
@@ -173,5 +175,15 @@ function alternarCenario (escolhaCenario) {
     } else {
         cenario[0].style.display = "block";
         cenario[1].style.display = "none";
+    }
+}
+
+function atualizarCenario(){
+    let cenarios = document.getElementsByClassName("opcao-cenario");
+    let cenariON = document.getElementById("cenarioId");
+    if(cenarios[0].style.display === "none"){
+        cenariON.style.backgroundImage = "url('midias/cenario-deserto.jpg')";
+    }else{
+        cenariON.style.backgroundImage = "url('midias/cenario.jpg')";
     }
 }

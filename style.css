@@ -264,6 +264,7 @@ ol{
   display: flex;
   justify-content: center;
   gap: 1rem;
+  user-select: none;
 }
 
 .botoes-navegar p:hover{
