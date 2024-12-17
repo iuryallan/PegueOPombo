@@ -44,6 +44,7 @@ header{
 .header-titulo{
   color: #fff;
   display: flex;
+  gap: 0.5rem;
   align-items: flex-end;
 }
 
