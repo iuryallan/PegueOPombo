@@ -78,6 +78,7 @@ function iniciarTemp () {
             atualizarRanking(pontos);
             adicionarPontucaoRanking();
             atualizarTempo();
+            aparecerPontosFinais();
             pontos = 0;
             habilitado = false;
             spanPontos.innerText = `Pontos: ${pontos}`;
@@ -125,11 +126,12 @@ function aparecerPontosFinais() {
     let pQtdPontos = document.getElementById("qtd-pontos");
 
     pQtdPontos.innerText = `${pontos}`;
+    interfacePontosFinais.style.display = "flex";
 }
 
-buttonFechar.addEventListener("click", () => {
-    interfaceConfig.style.display = "none"
-});
+function fecharPontos() {
+    interfacePontosFinais.style.display = "none";
+}
 
 // Função para ir atualizando os pontos conforme o decorrer da partida.
 

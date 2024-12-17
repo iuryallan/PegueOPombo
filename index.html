@@ -105,24 +105,11 @@
           <div onclick="alternarCenario(1)"><p>▶️</p></div>
         </div>
       </div>
-      <p>Voce deseja salvar o processo?</p>
-      <div>
-        <form class="definir-config">
-          <div>
-            <label for="sim">Sim</label>
-            <input type="radio" name="save" id="sim">
-          </div>
-          <div>
-            <label for="nao">Não</label>
-            <input type="radio" name="save" id="nao" checked="checked">
-          </div>
-        </form>
-      </div>
       <button class="botao-salvar" onclick="atualizarTempo()">Salvar</button>
     </section>
 
     <section class="fim-partida-popup" id="interface-pontos-finais">
-      <div class="fechar-pontos-finais" id="botao-fechar">
+      <div class="fechar-pontos-finais" id="botao-fechar" onclick="fecharPontos()">
         X
       </div>
       <div class="titulo-pontos-finais">
