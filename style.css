@@ -66,7 +66,6 @@ main{
   display: flex;
   flex-direction: column;
   align-items:center;
-  padding-top: 1rem;
   background-color: #7389AE;
 }
 .tela-jogo{
@@ -104,6 +103,7 @@ main{
 
 .iniciar{
   background-color: #22c55e;
+  color: white;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
   border-radius: 100rem;
   transition: ease transform 0.2s;
@@ -117,6 +117,7 @@ main{
 
 .parar{
   background-color: #ef4444;
+  color: white;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
   border-radius: 100rem;
   transition: ease transform 0.2s;
@@ -149,10 +150,10 @@ main{
   flex-direction:column;
   align-items: center;
   background-color: #EAEAEA ;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;;
   border-radius: 0.8rem;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592)
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592);
 }
 
 .titulo-como-jogar, .titulo-config{

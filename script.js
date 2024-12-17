@@ -112,6 +112,7 @@ const buttonClose = document.getElementById("button-close")
 
 buttonConfig.addEventListener("click", () => {
     if (!jogoAtivo){
+        interfacePontosFinais.style.display = "none";
         interfaceConfig.style.display = "flex"
     }
 });
