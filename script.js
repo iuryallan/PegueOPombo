@@ -181,23 +181,32 @@ function adicionarPontucaoRanking() {
     }
 }
 
-function alternarCenario (escolhaCenario) {
-    let cenario = document.getElementsByClassName("opcao-cenario");
-    if (escolhaCenario === 1) {
-        cenario[0].style.display = "none";
-        cenario[1].style.display = "block";
-    } else {
-        cenario[0].style.display = "block";
-        cenario[1].style.display = "none";
+let indiceCenarioAtivo = 0;  
+let cenarios = document.getElementsByClassName("opcao-cenario");
+
+function alternarCenario(direcao) {
+    for (let i = 0; i < cenarios.length; i++) {
+        cenarios[i].style.display = "none";
     }
+
+    if (direcao === 1 && indiceCenarioAtivo < cenarios.length - 1) {
+        indiceCenarioAtivo++; 
+    } else if (direcao === -1 && indiceCenarioAtivo > 0) {
+        indiceCenarioAtivo--;  
+    }
+
+    cenarios[indiceCenarioAtivo].style.display = "block";
 }
 
+const imagensDeFundo = [
+    'midias/cenario.jpg',
+    'midias/cenario-deserto.jpg',
+    'midias/cenario-vulcao.PNG',
+    'midias/cenario-floresta.PNG',
+    'midias/cenario-neve.PNG' 
+];
 function atualizarCenario(){
-    let cenarios = document.getElementsByClassName("opcao-cenario");
     let cenariON = document.getElementById("cenarioId");
-    if(cenarios[0].style.display === "none"){
-        cenariON.style.backgroundImage = "url('midias/cenario-deserto.jpg')";
-    }else{
-        cenariON.style.backgroundImage = "url('midias/cenario.jpg')";
-    }
+
+    cenariON.style.backgroundImage = `url('${imagensDeFundo[indiceCenarioAtivo]}')`;
 }

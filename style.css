@@ -330,3 +330,12 @@ ol{
   font-weight: 600;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.opcao-cenario{
+  width: 100px;
+  display: none;
+}
+
+.opcao-cenario:first-child{
+  display: block;
+}
