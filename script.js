@@ -118,6 +118,18 @@ buttonClose.addEventListener("click", () => {
     interfaceConfig.style.display = "none"
 });
 
+let interfacePontosFinais = document.getElementById("interface-pontos-finais");
+const buttonFechar = document.getElementById("button-fechar");
+
+function aparecerPontosFinais() {
+    let pQtdPontos = document.getElementById("qtd-pontos");
+
+    pQtdPontos.innerText = `${pontos}`;
+}
+
+buttonFechar.addEventListener("click", () => {
+    interfaceConfig.style.display = "none"
+});
 
 // Função para ir atualizando os pontos conforme o decorrer da partida.
 

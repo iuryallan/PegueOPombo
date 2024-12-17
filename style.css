@@ -234,7 +234,7 @@ footer p {
   cursor: pointer;
 }
 
-.fechar-config{
+.fechar-config, .fechar-pontos-finais{
   position: absolute;
   left: 20.8rem;
   top: -0.7rem;
@@ -281,4 +281,42 @@ ol{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.fim-partida-popup{
+  position: absolute;
+  top: 4rem;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top:2rem;
+  width: 20rem;
+  min-height: 8rem;
+  font-size: 1rem;
+  background-color: #EAEAEA ;
+  padding: 1.7rem 1rem 1rem 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.592)
+}
+
+.titulo-pontos-finais{
+  position: absolute;
+  top: -1rem;
+  text-align: center;
+  width: 9rem;
+  padding: 0.2rem;
+  background-color: #DD6E42;
+  color: #FFFFFF;
+  border: 2px solid black;
+  border-radius: 0.6rem;
+  transform: rotate(-8deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.488)
+}
+
+.texto-pontos {
+  padding-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
 }
