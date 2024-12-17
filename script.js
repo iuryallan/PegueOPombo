@@ -18,6 +18,7 @@ function iniciarPartida(){
         idPartida = setInterval(moverPombo,1000);
         iniciarTemp();
         habilitado = true;
+        interfacePontosFinais.style.display = "none";
     }
 }
 
